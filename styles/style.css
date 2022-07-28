@@ -40,7 +40,12 @@ h1 {
   margin: 2rem auto;
 }
 
-p {
+h2 {
+  font-size: 1.8rem;
+}
+
+p,
+.accupation {
   opacity: 0.75;
   max-width: 30rem;
   margin: 1.4rem auto;
@@ -82,6 +87,13 @@ ul {
 
   p {
     max-width: 420px;
+  }
+}
+
+@media (min-width: 800px) {
+  h2 {
+    font-size: 3rem;
+    max-width: 350px;
   }
 }
 
@@ -194,5 +206,52 @@ header li {
 
   .feature p {
     max-width: 390px;
+  }
+}
+
+/* >how it works */
+.how-it-works {
+  display: grid;
+  gap: 3.5rem;
+  justify-content: center;
+  padding: 2.8rem;
+  width: fit-content;
+  margin: 5rem auto;
+}
+
+.how-it-works img {
+  max-width: 450px;
+  justify-self: right;
+}
+
+.how-it-works p {
+  max-width: 32rem;
+  margin: 1.4rem 0;
+}
+
+.link {
+  --clr: hsl(176, 68%, 64%);
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  width: fit-content;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid var(--clr);
+}
+
+.link a {
+  position: relative;
+  text-decoration: none;
+  color: var(--clr);
+}
+
+@media (min-width: 800px) {
+  .how-it-works {
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 5rem;
+  }
+  .how-it-works p {
+    max-width: 500px;
   }
 }
