@@ -401,3 +401,96 @@ header li {
     margin: 0 auto;
   }
 }
+
+/* >footer */
+footer {
+  padding: 4rem;
+  padding-top: 23rem;
+  background: var(--bg-footer);
+}
+
+ul {
+  display: grid;
+  gap: 1.5rem;
+  margin: 3rem 0 6rem;
+}
+
+li {
+  opacity: 0.75;
+  max-width: 350px;
+}
+
+.details li {
+  position: relative;
+  padding-left: 4rem;
+}
+
+.details li::before {
+  position: absolute;
+  top: 0.5rem;
+  left: 0;
+}
+
+.details li:nth-child(1)::before {
+  content: url(../images/icon-location.svg);
+}
+
+.details li:nth-child(2)::before {
+  content: url(../images/icon-phone.svg);
+}
+
+.details li:nth-child(3)::before {
+  content: url(../images/icon-email.svg);
+}
+
+.social-plugins {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.social-plugins span {
+  display: grid;
+  place-content: center;
+  width: 36px;
+  height: 36px;
+  border: 1px solid var(--clr-font);
+  border-radius: 100px;
+}
+
+@media (min-width: 1000px) {
+  footer {
+    padding-bottom: 8rem;
+  }
+
+  footer > div {
+    padding: 0 5rem;
+  }
+
+  footer > div > div {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 3rem;
+    gap: 5rem;
+  }
+
+  .details {
+    display: grid;
+    grid-template-columns: 1.5fr 0.5fr;
+    column-gap: 5rem;
+    height: min-content;
+  }
+
+  .details li:nth-child(1) {
+    grid-row: span 2;
+  }
+
+  footer nav {
+    display: flex;
+    gap: 6rem;
+  }
+
+  ul {
+    margin: 0;
+  }
+}
