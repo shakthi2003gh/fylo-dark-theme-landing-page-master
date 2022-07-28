@@ -99,6 +99,7 @@ ul {
 
 /* >buttons */
 button {
+  height: fit-content;
   padding: 1.4rem 5rem;
   margin: 2rem 0;
   border: none;
@@ -371,7 +372,6 @@ header li {
 }
 
 .early-access input:focus {
-  outline: inset 2px solid;
   outline-color: hsl(176, 68%, 64%);
 }
 
@@ -493,4 +493,39 @@ li {
   ul {
     margin: 0;
   }
+}
+
+/* >hover state */
+nav li,
+button,
+.social-plugins span {
+  cursor: pointer;
+}
+
+.link:hover {
+  --clr: var(--clr-font);
+}
+
+.link:hover use:nth-child(2) {
+  fill: var(--clr-font);
+}
+
+button:hover {
+  filter: brightness(1.2);
+}
+
+header li:hover {
+  text-decoration: underline;
+}
+
+nav li:hover {
+  opacity: 1;
+  font-weight: bold;
+}
+
+.social-plugins span:hover {
+  border-color: hsl(176, 68%, 64%);
+}
+.social-plugins span:hover i {
+  color: hsl(176, 68%, 64%);
 }
