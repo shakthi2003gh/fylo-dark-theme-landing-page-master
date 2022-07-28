@@ -34,6 +34,18 @@ body {
   background: var(--bg);
 }
 
+h1 {
+  font-size: 2.4rem;
+  line-height: 2.4ch;
+  margin: 2rem auto;
+}
+
+p {
+  opacity: 0.75;
+  max-width: 30rem;
+  margin: 1.4rem auto;
+}
+
 .fs-2 {
   font-family: "Raleway", sans-serif;
 }
@@ -62,9 +74,21 @@ ul {
   margin: 0 auto;
 }
 
+@media (min-width: 650px) {
+  h1 {
+    font-size: 3rem;
+    max-width: 550px;
+  }
+
+  p {
+    max-width: 420px;
+  }
+}
+
 /* >buttons */
 button {
   padding: 1.4rem 5rem;
+  margin: 2rem 0;
   border: none;
   border-radius: 100px;
   color: var(--clr-font);
@@ -97,7 +121,7 @@ header li {
   opacity: 0.65;
 }
 
-@media (min-width: 600px) {
+@media (min-width: 650px) {
   header > div {
     padding: 5rem;
   }
@@ -109,5 +133,33 @@ header li {
 
   header ul {
     gap: 4rem;
+  }
+}
+
+/* >hero */
+.hero {
+  --pos-y: calc(4.5rem + 50vw);
+  --pos-y-2: calc(7.4rem + 80vw);
+
+  padding: 2.5rem;
+  background: url(../images/bg-curvy-mobile.svg) no-repeat,
+    linear-gradient(var(--bg-secondary), var(--bg-secondary)) no-repeat;
+  background-size: contain, 100% var(--pos-y-2);
+  background-position: center var(--pos-y), 0 0;
+}
+
+.hero img {
+  width: clamp(325px, 100%, 500px);
+}
+
+@media (min-width: 650px) {
+  .hero {
+    --pos-y: calc(100% + 4.2vw);
+
+    padding-top: 0;
+    background: url(../images/bg-curvy-desktop.svg) no-repeat,
+      linear-gradient(var(--bg-secondary), var(--bg-secondary)) no-repeat;
+    background-size: contain, 100%;
+    background-position: center var(--pos-y), 0 0;
   }
 }
