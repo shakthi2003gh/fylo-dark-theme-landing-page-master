@@ -255,3 +255,78 @@ header li {
     max-width: 500px;
   }
 }
+
+/* >testimonials */
+.testimonials {
+  display: grid;
+  gap: 3rem;
+  max-width: fit-content;
+  padding: 2.5rem;
+  margin: 10rem auto 0;
+}
+
+.testimonial {
+  position: relative;
+  display: grid;
+  gap: 2rem;
+  max-width: 350px;
+  padding: 2.5rem;
+  margin: 0 2rem;
+  border-radius: 5px;
+  box-shadow: 0 0 20px -16px rgba(133, 133, 133, 0.5);
+  background: var(--bg-testimonial);
+}
+
+.testimonial:first-child::before {
+  position: absolute;
+  content: url(../images/bg-quotes.png);
+  top: -3rem;
+  left: -0.5rem;
+  transform: scale(0.5);
+  z-index: -1;
+}
+
+.testimonial p,
+.accupation {
+  font-size: 1rem;
+  line-height: 3.3ch;
+  margin: 0;
+}
+
+.testimonial__details {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.testimonial img {
+  width: 30px;
+  border-radius: 100px;
+}
+
+.name {
+  display: block;
+  font-size: 1.1rem;
+  font-weight: bold;
+  letter-spacing: 0.2ch;
+}
+
+@media (min-width: 800px) {
+  .testimonials {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .testimonial {
+    margin: 0;
+  }
+
+  .testimonial:first-child::before {
+    transform: scale(1);
+  }
+
+  .testimonial p,
+  .accupation {
+    font-size: 1.4rem;
+    line-height: initial;
+  }
+}
