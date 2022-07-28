@@ -1,0 +1,39 @@
+@import url(/styles/normalize.css);
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Raleway:wght@400;700&display=swap");
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  min-width: 375px;
+}
+
+:root {
+  --clr-error: hsl(0, 100%, 63%);
+  --clr-font: hsl(0, 0%, 100%);
+
+  --bg: hsl(218, 28%, 13%);
+  --bg-testimonial: hsl(219, 30%, 18%);
+  --bg-sign-up: hsl(217, 28%, 15%);
+  --bg-footer: hsl(216, 53%, 9%);
+
+  --lg-button: linear-gradient(
+    to right,
+    hsl(176, 68%, 64%),
+    hsl(198, 60%, 50%)
+  );
+}
+
+body {
+  font: 1.4rem "Open Sans", sans-serif;
+  color: var(--clr-font);
+  background: var(--bg);
+}
+
+.fs-2 {
+  font-family: "Raleway", sans-serif;
+}
