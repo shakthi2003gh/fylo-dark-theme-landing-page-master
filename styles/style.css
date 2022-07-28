@@ -330,3 +330,74 @@ header li {
     line-height: initial;
   }
 }
+
+/* >early access */
+.early-access {
+  max-width: 850px;
+  padding: 2rem;
+  margin: 0 2rem;
+  border-radius: 5px;
+  box-shadow: 4px 7px 8px -3px rgb(0 0 0 / 50%);
+  background: var(--bg-secondary);
+  transform: translateY(50%);
+}
+
+.early-access h2 {
+  margin: 2rem auto 0;
+}
+
+.early-access :is(button, input) {
+  width: 100%;
+  border: none;
+  box-shadow: 0 8px 8px -5px rgb(0 0 0 / 50%);
+}
+
+.early-access input {
+  padding: 1.5rem 3rem;
+  border-radius: 100px;
+}
+
+.error {
+  position: relative;
+}
+
+.error::after {
+  position: relative;
+  content: "Please enter a valid email address";
+  color: var(--clr-error);
+
+  left: -6rem;
+  bottom: -1rem;
+}
+
+.early-access input:focus {
+  outline: inset 2px solid;
+  outline-color: hsl(176, 68%, 64%);
+}
+
+@media (min-width: 650px) {
+  .early-access {
+    padding: 2rem 7rem;
+  }
+
+  .early-access p {
+    max-width: 600px;
+  }
+
+  .early-access button {
+    margin: 0;
+  }
+
+  form {
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    gap: 2rem;
+    padding: 2rem 0;
+  }
+}
+
+@media (min-width: 1000px) {
+  .early-access {
+    margin: 0 auto;
+  }
+}
