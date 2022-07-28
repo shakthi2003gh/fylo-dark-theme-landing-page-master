@@ -18,7 +18,7 @@ html {
 
   --bg: hsl(218, 28%, 13%);
   --bg-testimonial: hsl(219, 30%, 18%);
-  --bg-sign-up: hsl(217, 28%, 15%);
+  --bg-secondary: hsl(217, 28%, 15%);
   --bg-footer: hsl(216, 53%, 9%);
 
   --lg-button: linear-gradient(
@@ -36,4 +36,36 @@ body {
 
 .fs-2 {
   font-family: "Raleway", sans-serif;
+}
+
+.a-c {
+  text-align: center;
+}
+
+header,
+.hero {
+  background: var(--bg-secondary);
+}
+
+.img-flex {
+  width: 100%;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* >buttons */
+button {
+  padding: 1.4rem 5rem;
+  border: none;
+  border-radius: 100px;
+  color: var(--clr-font);
+  background: var(--lg-button);
+}
+
+.hero button {
+  padding: 1.4rem 8rem;
 }
