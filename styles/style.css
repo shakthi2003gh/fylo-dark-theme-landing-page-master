@@ -57,6 +57,11 @@ ul {
   margin: 0;
 }
 
+.container {
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
 /* >buttons */
 button {
   padding: 1.4rem 5rem;
@@ -68,4 +73,41 @@ button {
 
 .hero button {
   padding: 1.4rem 8rem;
+}
+
+/* >header */
+header > div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem;
+}
+
+header .logo {
+  width: 85px;
+  height: 25px;
+}
+
+header ul {
+  display: flex;
+  gap: 2.5rem;
+}
+
+header li {
+  opacity: 0.65;
+}
+
+@media (min-width: 600px) {
+  header > div {
+    padding: 5rem;
+  }
+
+  header .logo {
+    width: 160px;
+    height: 45px;
+  }
+
+  header ul {
+    gap: 4rem;
+  }
 }
