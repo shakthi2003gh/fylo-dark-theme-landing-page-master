@@ -163,3 +163,36 @@ header li {
     background-position: center var(--pos-y), 0 0;
   }
 }
+
+/* >features */
+.features {
+  display: grid;
+  gap: 8rem;
+  margin: 6rem 0;
+}
+
+.feature img {
+  width: 68px;
+  margin-bottom: 3rem;
+}
+
+.feature .title {
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+
+@media (min-width: 800px) {
+  .features {
+    grid-template-columns: 1fr 1fr;
+    place-items: center;
+    gap: 5rem;
+    column-gap: 9rem;
+    max-width: 900px;
+    padding: 3rem;
+    margin: 5rem auto;
+  }
+
+  .feature p {
+    max-width: 390px;
+  }
+}
